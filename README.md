@@ -13,9 +13,9 @@ Gradle:
             ...
             maven { url "https://jitpack.io" }
         }
-   }
+    }
    
     dependencies {
         ...
         compile 'com.github.yamin-elmakis:TwitterSearchFramework:1.0.0'
-   }
+    }
