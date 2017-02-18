@@ -25,7 +25,7 @@ public class TwitterManager implements TwitterAuthListener {
     private ArrayList<String> pendingHashtags;
     private TwitterSearch twitterSearch;
 
-    private TwitterManager() {  /* empty */ }
+    private TwitterManager() {  /* empty */  }
 
     public static TwitterManager getInstance() {
         return instance;

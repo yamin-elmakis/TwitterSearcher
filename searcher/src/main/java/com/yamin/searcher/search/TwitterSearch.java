@@ -20,6 +20,7 @@ import java.io.UnsupportedEncodingException;
  */
 public class TwitterSearch implements
         com.android.volley.Response.Listener<JSONObject>, com.android.volley.Response.ErrorListener{
+
     private final String TAG = this.getClass().getSimpleName();
 
     private TwitterSearchListener searchListener;
@@ -43,11 +44,10 @@ public class TwitterSearch implements
     @Override
     public void onResponse(JSONObject response) {
         String hastag = null;
-        Log.d(TAG, "onResponse");
             try {
+                // get the searched hashtag from the response
                 if (response.has(LibKeys.STR_HASHTAG))
                     hastag = response.getString(LibKeys.STR_HASHTAG);
-                    Log.d(TAG, "onResponse: "+hastag);
             } catch (JSONException e) {
                 e.printStackTrace();
             }

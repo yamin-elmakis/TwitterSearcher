@@ -42,6 +42,7 @@ public class HashTagsRequest extends JsonObjectRequest {
     @Override
     protected void deliverResponse(JSONObject response) {
         try {
+            // get the searched hashtag and add it to the response
             response.put(LibKeys.STR_HASHTAG, hashtag);
         } catch (JSONException e) {
             e.printStackTrace();

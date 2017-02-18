@@ -21,7 +21,7 @@ public class MyVolley {
     private static RequestQueue mRequestQueue;
     private static MyVolley instance;
 
-    private MyVolley() {/* empty */ }
+    private MyVolley() {    /* empty */     }
 
     public static MyVolley getInstance() {
         if (instance == null)
