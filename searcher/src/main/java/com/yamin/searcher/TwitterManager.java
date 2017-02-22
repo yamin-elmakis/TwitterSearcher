@@ -18,20 +18,15 @@ import java.util.ArrayList;
  */
 public class TwitterManager implements TwitterAuthListener {
 
-    private static TwitterManager instance = new TwitterManager();
     private final String TAG = this.getClass().getSimpleName();
     private TwitterAuthListener authListener;
     private TwitterSearchListener searchListener;
     private ArrayList<String> pendingHashtags;
     private TwitterSearch twitterSearch;
 
-    private TwitterManager() {  /* empty */  }
+    public TwitterManager() {  /* empty */  }
 
-    public static TwitterManager getInstance() {
-        return instance;
-    }
-
-    public void init(@NonNull Context context) {
+    public static void init(@NonNull Context context) {
         MyVolley.init(context);
     }
 
