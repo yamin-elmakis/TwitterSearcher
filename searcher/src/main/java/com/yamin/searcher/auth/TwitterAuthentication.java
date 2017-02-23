@@ -54,7 +54,6 @@ public class TwitterAuthentication implements
         try {
             JSONObject res = new JSONObject(response);
             if (res.has(LibKeys.STR_TOKEN_TYPE) && res.getString(LibKeys.STR_TOKEN_TYPE).equalsIgnoreCase("bearer")) {
-                Log.d(TAG, "onResponse: bearer 1");
                 if (res.has(LibKeys.STR_ACCESS_TOKEN)) {
                     LibKeys.TWITTER_BEARER = res.getString(LibKeys.STR_ACCESS_TOKEN);
                     authListener.onAuthentication(Response.RESULT_OK);
