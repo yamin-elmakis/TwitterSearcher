@@ -35,7 +35,7 @@ init the searcher
         @Override
         public void onCreate() {
             super.onCreate();
-            TwitterManager.getInstance().init(this);
+            TwitterManager.init(this);
             ...
         }
     }  
@@ -44,7 +44,8 @@ init the searcher
 authenticate and search 
 
 ``` java
-    TwitterManager.getInstance().authenticate(TWITTER_KEY, TWITTER_SECRET, twitterAuthListener);
-    
-    TwitterManager.getInstance().search(twitterSearchListener, hashtag);
+    TwitterManager twitterManager = new TwitterManager();
+
+    twitterManager.authenticate(TWITTER_KEY, TWITTER_SECRET, twitterAuthListener);
+    twitterManager.search(twitterSearchListener, hashtag);
 ```
