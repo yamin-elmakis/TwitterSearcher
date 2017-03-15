@@ -4,26 +4,32 @@ Android library that lets you search hashtags in Twitter.
 
 Using Volley for Async HTTP requests.
 
-# Integration
+### Integration
+
+you can add this Lib from [GitPack.io](https://jitpack.io/#yamin-elmakis/TwitterSearcher)
 
 Gradle:
 
-    allprojects {
-        repositories {
-            ...
-            maven { url "https://jitpack.io" }
+``` xml
+
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
         }
     }
    
     dependencies {
         ...
-        compile 'com.github.yamin-elmakis:TwitterSearchFramework:1.0.0'
+        compile 'com.github.yamin-elmakis:TwitterSearchFramework:V2.0'
     }
+```
 
-# Usage
+### Usage
 
 init the searcher 
-    
+``` java
+
     public class App extends Application {
 
         @Override
@@ -33,9 +39,12 @@ init the searcher
             ...
         }
     }  
+```
 
 authenticate and search 
-    
+
+``` java
     TwitterManager.getInstance().authenticate(TWITTER_KEY, TWITTER_SECRET, twitterAuthListener);
     
     TwitterManager.getInstance().search(twitterSearchListener, hashtag);
+```
