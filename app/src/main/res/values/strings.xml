@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Twitter Searcher</string>
+    <string name="search_prompt">Enter search hashtag: </string>
+    <string name="search_toast_prompt">please Enter search hashtag first</string>
+    <string name="search_hint">#Tweet</string>
+    <string name="search_action">Search Twitter</string>
+    <string name="auth_ok">Twitter Authentication Succeeded</string>
+    <string name="auth_fail">Twitter Authentication Failed</string>
+    <string name="auth_fail2">Twitter key or secret is missing</string>
+    <string name="search_fail">Hashtag Search Failed</string>
 </resources>
